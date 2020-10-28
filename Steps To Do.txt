@@ -1,0 +1,6 @@
+1. Login to 000webhost with Fb
+2. Make a new Database
+3. Upload All PHP Files in File Explorer
+4. Go to Database Manager > PhpMyAdmin > Select Database
+5. Create New Table in Selected Database . Example - userdata.
+6. Follow Rest of The Code
