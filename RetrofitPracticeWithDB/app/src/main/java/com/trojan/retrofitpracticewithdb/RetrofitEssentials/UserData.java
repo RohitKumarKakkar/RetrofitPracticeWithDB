@@ -1,4 +1,4 @@
-package com.trojan.retrofitpracticewithdb;
+package com.trojan.retrofitpracticewithdb.RetrofitEssentials;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.trojan.retrofitpracticewithdb.Adapter.UserAdapter;
+import com.trojan.retrofitpracticewithdb.RetrofitEssentials.ApiClient;
+import com.trojan.retrofitpracticewithdb.RetrofitEssentials.UserData;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -51,5 +55,13 @@ public class RetriveData extends AppCompatActivity {
                 Log.w("RetriveData.java",t.getLocalizedMessage());
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(this,MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }

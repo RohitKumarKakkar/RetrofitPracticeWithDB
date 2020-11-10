@@ -1,4 +1,4 @@
-package com.trojan.retrofitpracticewithdb;
+package com.trojan.retrofitpracticewithdb.RetrofitEssentials;
 
 import java.util.List;
 
@@ -24,4 +24,22 @@ public interface ApiInterface {
     @Headers({"Content-Type: text/plain; charset=UTF-8"})
     @GET("retriveData.php")
     Call<List<UserData>> getUserData();
+
+
+    @FormUrlEncoded
+    @POST("updatedata.php")
+    Call<ResponseBody> updateUserData(
+            @Field("id") String id,
+            @Field("name") String name,
+            @Field("email") String email,
+            @Field("password") String password,
+            @Field("phone") String phone,
+            @Field("dob") String dob
+    );
+
+    @FormUrlEncoded
+    @POST("deletedata.php")
+    Call<ResponseBody> deleteUserData(
+            @Field("id") String id
+    );
 }

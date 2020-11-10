@@ -59,7 +59,19 @@
         android:id="@+id/btnRetrieve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retrieve Date From DB" />
+        android:text="Retrieve Data From DB" />
+
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Data To DB" />
+
+    <Button
+        android:id="@+id/btnDeleteData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Data from DB" />
 
 
 </LinearLayout>

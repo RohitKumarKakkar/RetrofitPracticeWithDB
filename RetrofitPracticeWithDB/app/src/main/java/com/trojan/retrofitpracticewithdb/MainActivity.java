@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.trojan.retrofitpracticewithdb.RetrofitEssentials.ApiClient;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -17,7 +19,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     EditText etname, etemail, etpassword, etphone, etdob;
-    Button btnInsert, btnRetrieve;
+    Button btnInsert, btnRetrieve,btnUpdateData,btnDeleteData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnInsert = findViewById(R.id.btnInsert);
         btnRetrieve = findViewById(R.id.btnRetrieve);
+        btnUpdateData = findViewById(R.id.btnUpdateData);
+        btnDeleteData = findViewById(R.id.btnDeleteData);
 
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +53,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnUpdateData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UpdateData.class);
+                startActivity(i);
+            }
+        });
+
+        btnDeleteData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,DeleteData.class);
+                startActivity(i);
+            }
+        });
 
     }
 
